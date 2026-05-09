@@ -25,7 +25,7 @@ class MainWindow(QMainWindow):
     
     # CẤU HÌNH PHIÊN BẢN (Thay đổi REPO_URL thành link Github của bạn)
     APP_VERSION = "1.0.0"
-    REPO_URL = "https://github.com/TÊN_TÀI_KHOẢN_CỦA_BẠN/TÊN_REPO_CỦA_BẠN"
+    REPO_URL = "https://github.com/ChuongLeQuang/Excel-Compare-Tool"
     
     def __init__(self):
         super().__init__()
@@ -513,6 +513,9 @@ class MainWindow(QMainWindow):
             base_dir = sys._MEIPASS
         else:
             base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+            
+        # Thiết lập thư mục gốc để QTextBrowser có thể tìm thấy thư mục 'assets' và load ảnh
+        browser.setSearchPaths([base_dir])
             
         try:
             with open(os.path.join(base_dir, "HDSD.md"), "r", encoding="utf-8") as f:

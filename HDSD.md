@@ -7,6 +7,10 @@ Phần mềm này giúp bạn đối chiếu dữ liệu giữa 2 file Excel (g�
 
 ---
 
+![Giao diện phần mềm](assets/screenshot.png)
+
+---
+
 ## BƯỚC 1: CẤU HÌNH CƠ BẢN (TAB 1. CONFIGURATION)
 
 Tại Tab này, bạn sẽ thiết lập các file cần đối chiếu và cách thức để phần mềm nhận diện "hai dòng giống nhau".
