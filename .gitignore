@@ -1,0 +1,30 @@
+# Environments
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# PyInstaller
+build/
+dist/
+*.spec
+
+# Logs
+logs/
+*.log
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# VS Code & OS
+.vscode/
+.DS_Store
+Thumbs.db

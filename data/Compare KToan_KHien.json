@@ -1,0 +1,68 @@
+{
+    "source": {
+        "file": "G:/TNTC/Compare_Two_XLSX/data/1. TH AVGT-14.10.2025 Da Nhap Lieu.xlsx",
+        "sheet": "TH AVGT-24.03.26 new",
+        "header": 9,
+        "targets": [
+            "MSV"
+        ]
+    },
+    "compare": {
+        "file": "G:/TNTC/Compare_Two_XLSX/data/DS SV DONG HOC PHI K25  update 24.03.26.xlsx",
+        "sheet": "TONG HOP",
+        "header": 4,
+        "targets": [
+            "MSSV"
+        ]
+    },
+    "key_mapping": [
+        {
+            "src": "MSV",
+            "cmp": "MSSV"
+        }
+    ],
+    "logic": "Concatenate",
+    "separator": "|",
+    "rules": [
+        {
+            "cond": "Match (Source & Compare)",
+            "act": "Copy (Compare -> Source)",
+            "tgt1": "Mã lớp 6 (KG 11/05/26)",
+            "tgt2": "",
+            "src_col": "MÃ LỚP 0526",
+            "val": ""
+        },
+        {
+            "cond": "Match (Source & Compare)",
+            "act": "Copy (Compare -> Source)",
+            "tgt1": "HP lớp 6",
+            "tgt2": "",
+            "src_col": "KHÓA THÁNG 5/2026",
+            "val": ""
+        },
+        {
+            "cond": "Match (Source & Compare)",
+            "act": "Assign Both",
+            "tgt1": "Tình Trạng",
+            "tgt2": "Tình trạng đối chiếu",
+            "src_col": "",
+            "val": "Khớp"
+        },
+        {
+            "cond": "Unmatch (Source only)",
+            "act": "Assign (Source)",
+            "tgt1": "Tình Trạng",
+            "tgt2": "",
+            "src_col": "",
+            "val": "Không tồn tại trong K.Hiền"
+        },
+        {
+            "cond": "Unmatch (Compare only)",
+            "act": "Assign (Compare)",
+            "tgt1": "Tình trạng đối chiếu",
+            "tgt2": "",
+            "src_col": "",
+            "val": "Không tồn tại trong K.Toán"
+        }
+    ]
+}
